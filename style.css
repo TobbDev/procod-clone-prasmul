@@ -1,0 +1,532 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  min-height: 200vh;
+  overflow-x: hidden;
+}
+.up-btn {
+  background-color: rgb(219, 219, 219);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #313131;
+  position: fixed;
+  right: 25px;
+  bottom: 100px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.up-btn:hover {
+  background-color: rgb(173, 173, 173);
+}
+.whatsapp-btn {
+  background-color: rgb(24, 215, 24);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.whatsapp-btn svg {
+  width: 30px;
+  height: 30px;
+}
+.whatsapp-btn:hover {
+  background-color: rgb(32, 128, 32);
+}
+
+.alert {
+  background-color: white;
+  width: 150px;
+  height: 60px;
+  border-radius: 5px;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: black;
+  position: fixed;
+  right: 100px;
+  bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.alert b {
+  font-weight: bold;
+}
+header,
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-color: #00376a;
+  color: white;
+  height: 70px;
+}
+nav {
+  height: 100px;
+  background-color: rgb(234, 234, 234);
+  color: white;
+  position: sticky;
+  top: 0;
+}
+header .container,
+nav .container {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Header Modif */
+header .container {
+  justify-content: space-between;
+}
+header .container .left,
+header .container .right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header .container .left span {
+  font-size: 28px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+header .container .right a {
+  color: #919bad;
+  text-decoration: none;
+  margin: 0px 12px;
+  transition: 0.3s;
+}
+header .container .right a.item:hover {
+  color: rgb(185, 185, 185);
+}
+header .container .right a.button {
+  background-color: #3db166;
+  text-transform: uppercase;
+  font-size: 15px;
+  height: 100%;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  padding: 20px 30px;
+  margin: 0;
+}
+header .container .right a.button:hover {
+  background-color: rgb(0, 197, 56);
+}
+
+/* Nav Modif */
+nav .container {
+  color: rgb(10, 31, 95);
+  justify-content: space-between;
+  align-items: center;
+}
+nav .container .logo {
+  width: 20%;
+  cursor: pointer;
+  height: 80%;
+  background-image: url(assets/logo-prasmul.webp);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+nav .container ul {
+  display: flex;
+  height: 100%;
+}
+nav .container ul li.item {
+  display: flex;
+  align-items: center;
+  margin: 0px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  height: 100%;
+  transition: 0.2s;
+}
+nav .container ul li.item:hover {
+  border-bottom: 5px solid rgb(14, 204, 68);
+  color: rgb(14, 204, 68);
+}
+nav .container ul li.search {
+  margin: 0;
+}
+
+/* Jumbotron */
+.jumbotron {
+  background-image: url(assets/jumbotron.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Faculties */
+
+.faculties {
+  background-image: url(assets/school-law-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-width: none;
+  min-height: 315px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.faculties .card {
+  background-color: #1e2d49;
+  height: 150px;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.faculties .card img {
+  width: 240px;
+  height: 135px;
+}
+
+/* About */
+.about {
+  display: flex;
+  background-color: #1e2d49;
+  color: white;
+  width: 100%;
+  padding: 45px 0;
+  justify-content: center;
+  padding-bottom: 300px;
+}
+.about .container {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.about .left {
+  width: 30%;
+  color: #a8a8a8;
+  justify-content: center;
+  margin-right: 50px;
+}
+.about .left h1 {
+  font-weight: bold;
+}
+.about .right {
+  width: 70%;
+}
+.about .right h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+.about .right p {
+  line-height: 30px;
+  font-size: 22px;
+}
+.about .right p.first {
+  font-size: 25px;
+  color: #a5afc1;
+}
+
+.about .right a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  transition: 0.3s;
+}
+.about .right a:hover {
+  color: rgb(122, 122, 122);
+}
+
+.container-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 0;
+}
+.container-img .floating-img {
+  background-image: url(assets/school-law-bg.webp);
+  width: 80%;
+  height: 250px;
+  margin-top: -200px;
+  border-radius: 2px;
+  box-shadow: 10px 10px 44px 6px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 44px 6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 44px 6px rgba(0, 0, 0, 0.75);
+}
+
+.video-section {
+  width: 100%;
+  height: 700px;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.video-section svg {
+  width: 130px;
+  height: 130px;
+  color: rgba(255, 255, 255, 0.795);
+  cursor: pointer;
+}
+
+/* Admisi Section */
+.admisi {
+  display: flex;
+  height: 500px;
+  width: 100%;
+}
+.admisi .left {
+  background-color: #00376a;
+  width: 50%;
+  height: 100%;
+}
+.admisi .right {
+  background-color: #1e2d49;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admisi .right .container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.admisi .judul h1,
+.admisi p {
+  color: white;
+}
+
+.admisi .judul h1,
+.admisi .judul h2 {
+  font-weight: bold;
+}
+.admisi .judul h2 {
+  margin-top: 15px;
+  color: #339966;
+}
+
+.admisi p {
+  margin: 25px 0;
+  font-size: 17px;
+  line-height: 35px;
+}
+.admisi .admisi-btn {
+  background-color: #339966;
+  width: 130px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.admisi .admisi-btn:hover {
+  background-color: #1e1e1e;
+}
+
+/* Fitur Section */
+.fitur-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #1e1e1e;
+  padding: 250px 0 150px 0;
+}
+.fitur {
+  width: 70%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.fitur .card {
+  min-height: 350px;
+  margin: 10px 25px;
+}
+
+.fitur .card svg,
+.fitur .card p {
+  color: #b4b4b4;
+}
+.fitur .card svg {
+  width: 40px;
+  height: 40px;
+  margin: 30px 0;
+}
+.fitur .card h1 {
+  font-weight: bolder;
+  color: white;
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+.fitur .card p {
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+.fitur .card a {
+  text-decoration: none;
+  color: #4bbe9f;
+  transition: 0.3s;
+}
+.fitur .card a:hover {
+  color: white;
+}
+
+/* Berita Section */
+.berita {
+  width: 100%;
+  background-color: #1e2d49;
+  color: white;
+  padding: 180px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.berita .container {
+  width: 80%;
+}
+.berita h1 {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.berita a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  transition: 0.3s;
+  margin-bottom: 50px;
+}
+.berita a svg {
+  margin: 0 5px;
+}
+
+.berita a:hover {
+  color: rgb(188, 188, 188);
+}
+
+.berita .berita-grid {
+  width: 100%;
+  min-height: 1000px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.berita .berita-grid .card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 25px 0 0;
+}
+
+.berita .berita-grid .card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.berita .berita-grid span {
+  color: #919bad;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.berita .berita-grid p {
+  font-weight: bolder;
+  font-size: 19px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.berita .berita-grid p:hover {
+  color: #339966;
+}
+
+/* Information Section */
+.information {
+  background-color: #2e82ca;
+  width: 100%;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.information .card-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 80%;
+  color: white;
+}
+
+.information .card-container .card {
+  margin: 0 25px 0 0;
+}
+
+.information .card-container .card h2 {
+  font-weight: bold;
+  margin: 25px 0;
+}
+
+.information .card-container .card hr {
+  margin: 25px 0;
+}
+
+.information .card-container .card span {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.information .card-container .card p {
+  margin: 10px 0 25px 0;
+  font-size: 18px;
+}
+
+.information .card-container .card p svg {
+  margin: 0 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Footer Section */
+footer {
+  background-color: #00376a;
+  color: white;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
